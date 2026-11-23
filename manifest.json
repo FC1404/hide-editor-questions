@@ -1,0 +1,23 @@
+{
+  "manifestVersion": 1,
+  "id": "hide-editor-questions",
+  "name": "Hide Editor Questions",
+  "author": "FC1404",
+  "repoUrl": "https://github.com/FC1404/hide-editor-questions",
+  "version": {
+    "major": 0,
+    "minor": 2,
+    "patch": 14
+  },
+  "theme": [],
+  "enableOnMobile": true,
+  "description": "Hide questions on tagged forward and backward flashcards in the editor. Choose which tags activate the answer view.",
+  "requestNative": false,
+  "requiredScopes": [
+    {
+      "type": "All",
+      "level": "ReadCreateModify"
+    }
+  ],
+  "unlisted": true
+}
