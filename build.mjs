@@ -29,5 +29,5 @@ const bundle = {
 await Promise.all([
   build({ ...bundle, outfile: path('dist/index-sandbox.js') }),
   build({ ...bundle, outfile: path('dist/index.js'), banner: { js: 'const IMPORT_META = import.meta;' } }),
-  ...['index.html', 'manifest.json', 'README.md'].map(file => copyFile(path(file), path(`dist/${file}`))),
+  ...['index.html', 'manifest.json', 'README.md', 'THIRD-PARTY-NOTICES.txt'].map(file => copyFile(path(file), path(`dist/${file}`))),
 ]);

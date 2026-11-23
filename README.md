@@ -20,15 +20,17 @@ The plugin runs in RemNote's sandbox and requests `All / ReadCreateModify`. It r
 
 RemNote syncs configured tag names through its plugin storage. The answer-view toggle is stored for the current session. The plugin code does not transmit notes, Rem IDs, or tag names to third-party services and does not include analytics.
 
+The licenses for bundled dependencies are in THIRD-PARTY-NOTICES.txt.
+
 ## Build and submit
 
 1. Set `author` and `repoUrl` in `manifest.json` to your name and this plugin's public GitHub repository. Keep `unlisted: true` for an unlisted release.
 2. Run `npm install` or `pnpm install --frozen-lockfile`, then run `npm run build`. The upload files are generated in `dist`.
 3. To try the build locally, run `node serve.mjs`. In RemNote, go to **Settings → Plugins → Build → Develop from localhost** and enter `http://127.0.0.1:8080`.
-4. Publish the source code and updated manifest in the public repository. Package the five files in `dist` directly at the root of the upload ZIP.
+4. Publish the source code and updated manifest in the public repository. Package the six files in `dist` directly at the root of the upload ZIP.
 
    ```powershell
-   Compress-Archive -LiteralPath dist/index.html,dist/index.js,dist/index-sandbox.js,dist/manifest.json,dist/README.md -DestinationPath RemNote-Upload.zip -Force
+   Compress-Archive -LiteralPath dist/index.html,dist/index.js,dist/index-sandbox.js,dist/manifest.json,dist/README.md,dist/THIRD-PARTY-NOTICES.txt -DestinationPath RemNote-Upload.zip -Force
    ```
 
 5. Upload the ZIP in **Settings → Plugins → Build → Upload plugin**. After review, open the unlisted installation page at `https://www.remnote.com/plugins/hide-editor-questions`.
